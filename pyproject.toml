@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "natapy"
+version = "0.1.0"
+description = "A compact natural-language utilities package for Python."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Octomal" }]
+license = { text = "MIT" }
+keywords = ["text", "natural-language", "utilities"]
+
+[tool.setuptools]
+packages = ["natapy"]
