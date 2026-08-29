@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: natapy
+Version: 0.1.0
+Summary: A compact natural-language utilities package for Python.
+Author: Octomal
+License: MIT
+Keywords: text,natural-language,utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# -NATAPY
+TK

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+natapy/__init__.py
+natapy/core.py
+natapy.egg-info/PKG-INFO
+natapy.egg-info/SOURCES.txt
+natapy.egg-info/dependency_links.txt
+natapy.egg-info/top_level.txt
+tests/test_natapy.py
