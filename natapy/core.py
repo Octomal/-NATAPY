@@ -134,9 +134,7 @@ STOPWORDS = {
 
 def normalize(text: str, *, lower: bool = True, collapse_whitespace: bool = True, strip_punctuation: bool = False) -> str:
     """Return a normalized version of a string."""
-    if text is None:
-        raise TypeError("text must not be None")
-    value = str(text)
+    value = _as_text(text)
     if lower:
         value = value.lower()
     if collapse_whitespace:
@@ -173,7 +171,9 @@ def extract_keywords(text: str, *, limit: int = 5, exclude_stopwords: bool = Tru
     if exclude_stopwords:
         words = [word for word in words if word not in STOPWORDS]
     counts = Counter(words)
-    order = {word: index for index, word in enumerate(words) if word in counts}
+    order: dict[str, int] = {}
+    for index, word in enumerate(words):
+        order.setdefault(word, index)
     return [
         word
         for word, _ in sorted(counts.items(), key=lambda item: (-item[1], order[item[0]]))[:limit]
